@@ -13,54 +13,54 @@ public class LoginSteps {
     LoginPage loginPage;
     HomePage homePage;
 
-    @Given("user on login page")
-    public void userOnLoginPage() {
+    @Given("admin on login page")
+    public void adminOnLoginPage() {
         loginPage.open();
         loginPage.onLoginPage();
     }
 
-    @When("user input valid email")
-    public void userInputValidEmail() {
+    @When("admin input valid email")
+    public void adminInputValidEmail() {
         loginPage.inputValidEmail("developer@dev.com");
     }
 
-    @And("user input valid password")
-    public void userInputValidPassword() {
+    @And("admin input valid password")
+    public void adminInputValidPassword() {
         loginPage.inputValidPassword("dev12345");
     }
 
-    @And("user click login button")
-    public void userClickLoginButton() {
+    @And("admin click login button")
+    public void adminClickLoginButton() {
         loginPage.clickLoginButton();
     }
 
-    @Then("user on home page successfully")
-    public void userOnHomePageSuccessfully() {
+    @Then("admin on home page successfully")
+    public void adminOnHomePageSuccessfully() {
         homePage.onHomePage();
     }
 
-    @When("user input empty email")
-    public void userInputEmptyEmail() {
+    @When("admin input empty email")
+    public void adminInputEmptyEmail() {
         loginPage.inputEmptyEmail("");
     }
 
-    @Then("user see alert error message")
-    public void userSeeAlertErrorMessage() {
+    @Then("admin see alert error message")
+    public void adminSeeAlertErrorMessage() {
         loginPage.seeAlertErrorMessage();
     }
 
-    @When("user input invalid email")
-    public void userInputInvalidEmail() {
+    @When("admin input invalid email")
+    public void adminInputInvalidEmail() {
         loginPage.inputInvalidEmail("developer#dev.com");
     }
 
-    @And("user input empty password")
-    public void userInputEmptyPassword() {
+    @And("admin input empty password")
+    public void adminInputEmptyPassword() {
         loginPage.inputEmptyPassword("");
     }
 
-    @And("user input invalid password")
-    public void userInputInvalidPassword() {
+    @And("admin input invalid password")
+    public void adminInputInvalidPassword() {
         loginPage.inputInvalidPassword("developer12345");
     }
 }
