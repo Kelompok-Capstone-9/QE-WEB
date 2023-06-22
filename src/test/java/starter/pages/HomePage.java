@@ -13,4 +13,31 @@ public class HomePage extends PageObject {
     public void onHomePage(){
         $(titleHomePage()).isDisplayed();
     }
+
+    private By maxMenu(){
+        return By.xpath("//*[@id=\"root\"]/div/div[2]/div[1]/div[1]/button");
+    }
+
+    private By classMenu(){
+        return By.xpath("//*[@id=\"root\"]/div/div[1]/div/div/div[2]/div[1]/div[1]/button");
+    }
+
+    private By manageClassMenu(){
+        return By.xpath("//button[text()='Manage Class']");
+    }
+
+    @Step
+    public void clickMaxMenu(){
+        $(maxMenu()).click();
+    }
+
+    @Step
+    public void clickClassMenu(){
+        $(classMenu()).click();
+    }
+
+    @Step
+    public void clickManageClassMenu(){
+        $(manageClassMenu()).click();
+    }
 }
