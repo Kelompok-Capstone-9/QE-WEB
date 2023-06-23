@@ -116,4 +116,131 @@ public class Manage_Offline_ClassesSteps {
     public void adminSuccessfullyAddNewLocation() {
         offlineClassesPage.successfullyAddNewLocation();
     }
+
+    @When("admin click package button")
+    public void adminClickPackageButton() {
+        offlineClassesPage.clickPackageButton();
+    }
+
+    @And("admin on class package page")
+    public void adminOnClassPackagePage() {
+        offlineClassesPage.onClassPackagePage();
+    }
+
+    @And("admin click edit class package icon")
+    public void adminClickEditClassPackageIcon() {
+        offlineClassesPage.clickEditClassPackageIcon();
+    }
+
+    @And("admin input field to edit class package")
+    public void adminInputFieldToEditClassPackage() {
+        offlineClassesPage.inputFieldToEditClassPackage("79000");
+    }
+
+    @And("admin click package submit button")
+    public void adminClickPackageSubmitButton() {
+        offlineClassesPage.clickPackageSubmitButton();
+    }
+
+    @Then("admin can see class package edited")
+    public void adminCanSeeClassPackageEdited() {
+        offlineClassesPage.canSeeClassPackageEdited();
+    }
+
+    @And("admin click delete class package icon")
+    public void adminClickDeleteClassPackageIcon() {
+        offlineClassesPage.clickDeleteClassPackageIcon();
+    }
+
+    @Then("admin successfully delete class package")
+    public void adminSuccessfullyDeleteClassPackage() {
+        offlineClassesPage.successfullyDeleteClassPackage();
+    }
+
+    @When("admin click delete class icon")
+    public void adminClickDeleteClassIcon() {
+        offlineClassesPage.clickDeleteClassIcon();
+    }
+
+    @Then("admin successfully delete class")
+    public void adminSuccessfullyDeleteClass() {
+        offlineClassesPage.successfullyDeleteClass();
+    }
+
+    @When("admin click edit class icon")
+    public void adminClickEditClassIcon() {
+        offlineClassesPage.clickEditClassIcon();
+    }
+
+    @And("admin input field to edit class")
+    public void adminInputFieldToEditClass() {
+        offlineClassesPage.inputFieldToEditClass("Pilates");
+    }
+
+    @And("admin click class submit button")
+    public void adminClickClassSubmitButton() {
+        offlineClassesPage.clickClassSubmitButton();
+    }
+
+    @Then("admin can see class edited")
+    public void adminCanSeeClassEdited() {
+        offlineClassesPage.canSeeClassEdited();
+    }
+
+    @And("admin click add package button")
+    public void adminClickAddPackageButton() {
+        offlineClassesPage.clickAddPackageButton();
+    }
+
+    @And("admin select class")
+    public void adminSelectClass() {
+        offlineClassesPage.selectClass();
+        offlineClassesPage.zumbaClass();
+    }
+
+    @And("admin select period")
+    public void adminSelectPeriod() {
+        offlineClassesPage.selectPeriod();
+        offlineClassesPage.dailyPeriodSelect();
+    }
+
+    @And("admin input price field")
+    public void adminInputPriceField() {
+        offlineClassesPage.inputPriceField("10000");
+    }
+
+    @And("admin click class package submit button")
+    public void adminClickClassPackageSubmitButton() {
+        offlineClassesPage.clickClassPackageSubmitButton();
+    }
+
+    @Then("admin successfully add new class package")
+    public void adminSuccessfullyAddNewClassPackage() {
+        offlineClassesPage.successfullyAddNewClassPackage();
+    }
+
+    @When("admin click search box")
+    public void adminClickSearchBox() {
+        offlineClassesPage.clickSearchBox();
+    }
+
+    @And("admin input valid keyword")
+    public void adminInputValidKeyword() {
+        offlineClassesPage.inputValidKeyword("Zumba");
+    }
+
+    @Then("admin can see offline class according to keyword")
+    public void adminCanSeeOfflineClassAccordingToKeyword() {
+        offlineClassesPage.canSeeOfflineClassAccordingToKeyword();
+    }
+
+    @And("admin input invalid keyword")
+    public void adminInputInvalidKeyword() {
+        offlineClassesPage.inputInvalidKeyword("Burger");
+    }
+
+    @Then("admin see {string} message")
+    public void adminSeeMessage(String arg0) {
+        offlineClassesPage.seeNoDataAvailableMessage();
+    }
 }
