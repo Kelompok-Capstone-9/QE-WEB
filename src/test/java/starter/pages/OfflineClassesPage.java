@@ -321,7 +321,7 @@ public class OfflineClassesPage extends PageObject {
     }
 
     @Step
-    public void inputPriceField(String price){
+    public void inputPricePackageField(String price){
         $(priceField()).type(price);
     }
 

@@ -40,4 +40,13 @@ public class HomePage extends PageObject {
     public void clickManageClassMenu(){
         $(manageClassMenu()).click();
     }
+
+    private By manageBookingMenu(){
+        return By.xpath("//button[text()='Manage Booking']");
+    }
+
+    @Step
+    public void clickManageBookingMenu(){
+        $(manageBookingMenu()).click();
+    }
 }

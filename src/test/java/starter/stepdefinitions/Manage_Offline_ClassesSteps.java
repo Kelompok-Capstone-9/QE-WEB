@@ -204,9 +204,9 @@ public class Manage_Offline_ClassesSteps {
         offlineClassesPage.dailyPeriodSelect();
     }
 
-    @And("admin input price field")
-    public void adminInputPriceField() {
-        offlineClassesPage.inputPriceField("10000");
+    @And("admin input price")
+    public void adminInputPrice() {
+        offlineClassesPage.inputPricePackageField("10000");
     }
 
     @And("admin click class package submit button")
