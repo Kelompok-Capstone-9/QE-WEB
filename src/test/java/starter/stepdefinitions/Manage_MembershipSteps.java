@@ -69,12 +69,22 @@ public class Manage_MembershipSteps {
 
     @And("admin input field to edit membership plan")
     public void adminInputFieldToEditMembershipPlan() {
-        membershipPage.inputFieldToEditMembershipPlan("Intermediate Yearly");
+        membershipPage.inputFieldToEditMembershipPlan("Beginner Yearly");
     }
 
     @Then("admin successfully edit membership plan")
     public void adminSuccessfullyEditMembershipPlan() {
         membershipPage.seeAlertSuccessfulEditMembershipPlan();
         membershipPage.successfullyEditMembershipPlan();
+    }
+
+    @When("admin click delete membership plan icon")
+    public void adminClickDeleteMembershipPlanIcon() {
+        membershipPage.clickDeleteMembershipPlanIcon();
+    }
+
+    @Then("admin successfully delete membership plan")
+    public void adminSuccessfullyDeleteMembershipPlan() {
+        membershipPage.successfullyDeleteMembershipPlan();
     }
 }

@@ -47,7 +47,7 @@ public class MembershipPage extends PageObject {
     }
 
     private By editMembershipPlanIcon(){
-        return By.xpath("(//*[@id=\"card-membership\"]/div/div[2]/div/div/div[1]/button/img)[1]");
+        return By.id("editButtonMembership");
     }
 
     @Step
@@ -128,5 +128,19 @@ public class MembershipPage extends PageObject {
     @Step
     public void successfullyEditMembershipPlan(){
         $(descriptionCard()).isDisplayed();
+    }
+
+    private By deleteMembershipPlanIcon(){
+        return By.id("deleteButtonMembership");
+    }
+
+    @Step
+    public void clickDeleteMembershipPlanIcon(){
+        $(deleteMembershipPlanIcon()).click();
+    }
+
+    @Step
+    public void successfullyDeleteMembershipPlan(){
+        $(membershipTitle()).isDisplayed();
     }
 }
