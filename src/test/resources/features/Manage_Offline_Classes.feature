@@ -85,3 +85,13 @@ Feature: As a admin i want to manage offline classes so that i can see offline c
     And admin input field to edit class package
     And admin click package submit button
     Then admin can see class package edited
+
+  @ManageOffline-1
+  Scenario: As a admin i want to add new offline class
+    When admin click add class button
+    And admin input class name
+    And admin select location
+    And admin input started at
+    And admin input class description
+    And admin click add class submit button
+    Then admin successfully add new offline class

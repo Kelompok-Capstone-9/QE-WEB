@@ -243,4 +243,40 @@ public class Manage_Offline_ClassesSteps {
     public void adminSeeMessage(String arg0) {
         offlineClassesPage.seeNoDataAvailableMessage();
     }
+
+    @When("admin click add class button")
+    public void adminClickAddClassButton() {
+        offlineClassesPage.clickAddClassButton();
+    }
+
+    @And("admin input class name")
+    public void adminInputClassName() {
+        offlineClassesPage.inputClassName("Yoga");
+    }
+
+    @And("admin select location")
+    public void adminSelectLocation() {
+        offlineClassesPage.selectLocation();
+        offlineClassesPage.clickGoFitMedanLocation();
+    }
+
+    @And("admin input started at")
+    public void adminInputStartedAt() {
+        offlineClassesPage.inputStartedAt();
+    }
+
+    @And("admin input class description")
+    public void adminInputClassDescription() {
+        offlineClassesPage.inputClassDescription("This is yoga class");
+    }
+
+    @And("admin click add class submit button")
+    public void adminClickAddClassSubmitButton() {
+        offlineClassesPage.clickAddClassSubmitButton();
+    }
+
+    @Then("admin successfully add new offline class")
+    public void adminSuccessfullyAddNewOfflineClass() {
+        offlineClassesPage.successfullyAddNewOfflineClass();
+    }
 }

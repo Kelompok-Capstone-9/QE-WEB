@@ -359,4 +359,72 @@ public class OfflineClassesPage extends PageObject {
     public void seeNoDataAvailableMessage(){
         $(noDataMessage()).isDisplayed();
     }
+
+    private By addClassButton(){
+        return By.id("addOffline");
+    }
+
+    private By classNameField(){
+        return By.id("name");
+    }
+
+    private By location(){
+        return By.id("location");
+    }
+
+    private By goFitMedan(){
+        return By.xpath("//option[text()='GoFit Medan']");
+    }
+
+    private By startedAt(){
+        return By.xpath("/html/body/div[3]/div/div/div[2]/div[4]/div/div/input");
+    }
+
+    private By classDescriptionField(){
+        return By.id("description");
+    }
+
+    private By addClassSubmitButton(){
+        return By.id("submitEmail");
+    }
+
+    @Step
+    public void clickAddClassButton(){
+        $(addClassButton()).click();
+    }
+
+    @Step
+    public void inputClassName(String className){
+        $(classNameField()).type(className);
+    }
+
+    @Step
+    public void selectLocation(){
+        $(location()).click();
+    }
+
+    @Step
+    public void clickGoFitMedanLocation(){
+        $(goFitMedan()).click();
+    }
+
+    @Step
+    public void inputStartedAt(){
+        $(startedAt()).click();
+    }
+
+    @Step
+    public void inputClassDescription(String classDescription){
+        $(classDescriptionField()).type(classDescription);
+    }
+
+    @Step
+    public void clickAddClassSubmitButton(){
+        $(addClassSubmitButton()).click();
+    }
+
+    @Step
+    public void successfullyAddNewOfflineClass(){
+        $(manageOfflineClassesTitle()).isDisplayed();
+    }
 }
