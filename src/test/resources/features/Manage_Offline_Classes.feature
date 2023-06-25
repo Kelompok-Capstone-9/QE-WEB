@@ -64,6 +64,7 @@ Feature: As a admin i want to manage offline classes so that i can see offline c
     When admin click package button
     And admin on class package page
     And admin click add package button
+    And admin input page
     And admin select class
     And admin select period
     And admin input price

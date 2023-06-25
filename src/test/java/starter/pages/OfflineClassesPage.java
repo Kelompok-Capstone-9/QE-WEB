@@ -427,4 +427,13 @@ public class OfflineClassesPage extends PageObject {
     public void successfullyAddNewOfflineClass(){
         $(manageOfflineClassesTitle()).isDisplayed();
     }
+
+    private By pageField(){
+        return By.id("pages");
+    }
+
+    @Step
+    public void inputPage(String page){
+        $(pageField()).type(page);
+    }
 }

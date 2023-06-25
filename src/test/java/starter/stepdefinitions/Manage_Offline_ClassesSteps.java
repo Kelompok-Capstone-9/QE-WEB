@@ -279,4 +279,9 @@ public class Manage_Offline_ClassesSteps {
     public void adminSuccessfullyAddNewOfflineClass() {
         offlineClassesPage.successfullyAddNewOfflineClass();
     }
+
+    @And("admin input page")
+    public void adminInputPage() {
+        offlineClassesPage.inputPage("1");
+    }
 }

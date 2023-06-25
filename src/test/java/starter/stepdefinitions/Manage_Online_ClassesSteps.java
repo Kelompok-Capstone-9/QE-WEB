@@ -81,4 +81,20 @@ public class Manage_Online_ClassesSteps {
     public void adminCanSeeOnlineClassPackageEdited() {
         onlineClassesPage.successfullyEditOnlineClassPackage();
     }
+
+    @And("admin input package page")
+    public void adminInputPackagePage() {
+        onlineClassesPage.inputPackagePage("1");
+    }
+
+    @And("admin select online class")
+    public void adminSelectOnlineClass() {
+        onlineClassesPage.selectOnlineClass();
+        onlineClassesPage.selectPilatesClass();
+    }
+
+    @Then("admin successfully add new online class package")
+    public void adminSuccessfullyAddNewOnlineClassPackage() {
+        onlineClassesPage.successfullyAddNewOnlineClassPackage();
+    }
 }

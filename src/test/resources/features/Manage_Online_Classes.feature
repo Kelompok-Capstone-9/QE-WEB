@@ -55,3 +55,15 @@ Feature: As a admin i want to manage online class so that i can see online class
     And admin input field to edit class package
     And admin click package submit button
     Then admin can see online class package edited
+
+  @ManageOnline-6
+  Scenario: As a admin i want to add new online class package
+    When admin click package button
+    And admin on class package page
+    And admin click add package button
+    And admin input package page
+    And admin select online class
+    And admin select period
+    And admin input price
+    And admin click class package submit button
+    Then admin successfully add new online class package

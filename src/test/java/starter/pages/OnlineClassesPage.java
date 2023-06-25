@@ -105,4 +105,36 @@ public class OnlineClassesPage extends PageObject {
     public void successfullyEditOnlineClassPackage(){
         $(onlineClassPackageTitle()).isDisplayed();
     }
+
+    private By packagePage(){
+        return By.id("pages");
+    }
+
+    private By onlineClassSelect(){
+        return By.id("classTitle");
+    }
+
+    private By pilatesClass(){
+        return By.xpath("//option[text()='Pilates Class']");
+    }
+
+    @Step
+    public void inputPackagePage(String packagePage){
+        $(packagePage()).type(packagePage);
+    }
+
+    @Step
+    public void selectOnlineClass(){
+        $(onlineClassSelect()).click();
+    }
+
+    @Step
+    public void selectPilatesClass(){
+        $(pilatesClass()).click();
+    }
+
+    @Step
+    public void successfullyAddNewOnlineClassPackage(){
+        $(manageOnlineClassTitle()).isDisplayed();
+    }
 }
