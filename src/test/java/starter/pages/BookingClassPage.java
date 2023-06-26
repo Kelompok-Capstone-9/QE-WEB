@@ -13,8 +13,14 @@ public class BookingClassPage extends PageObject {
         return By.xpath("//button[text()='Online']");
     }
 
+    private By OfflineMenu(){
+        return By.xpath("//button[text()='Offline']");
+    }
     private By pointThree(){
         return By.xpath("//*[@id=\"root\"]/div/div[2]/div[3]/table/tbody/tr[1]/td[4]");
+    }
+    private By pointThreeOffline(){
+        return By.xpath("//*[@id=\"root\"]/div/div[2]/div[3]/table/tbody/tr[1]/td[6]/div/button");
     }
 
     private By viewDetailButton(){
@@ -34,15 +40,26 @@ public class BookingClassPage extends PageObject {
     public void clickOnlineMenu(){
         $(onlineMenu()).click();
     }
+    @Step
+    public void clickOfflineMenu(){
+        $(OfflineMenu()).click();
+    }
 
     @Step
     public void canSeeAllOnlineClassBooking(){
+        $(manageClassBookingTitle()).isDisplayed();
+    }
+    @Step
+    public void canSeeAllOfflineClassBooking(){
         $(manageClassBookingTitle()).isDisplayed();
     }
 
     @Step
     public void clickPointThree(){
         $(pointThree()).click();
+    }
+    public void clickPointThreeOffline(){
+        $(pointThreeOffline()).click();
     }
 
     @Step
