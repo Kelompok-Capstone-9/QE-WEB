@@ -69,7 +69,7 @@ public class Manage_Offline_ClassesSteps {
 
     @Then("admin can see location edited")
     public void adminCanSeeLocationEdited() {
-        offlineClassesPage.seeLocationEdited();
+        offlineClassesPage.seeAlertSuccess();
     }
 
     @And("admin click delete location icon")
@@ -79,7 +79,7 @@ public class Manage_Offline_ClassesSteps {
 
     @Then("admin successfully delete location")
     public void adminSuccessfullyDeleteLocation() {
-        offlineClassesPage.successfullyDeleteLocation();
+        offlineClassesPage.seeAlertSuccess();
     }
 
     @And("admin click add location button")

@@ -1,6 +1,7 @@
 package starter.pages;
 
 import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.actions.Switch;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
 
@@ -46,7 +47,7 @@ public class OfflineClassesPage extends PageObject {
     }
 
     private By editLocationIcon(){
-        return By.xpath("//*[@id=\"container\"]/div/div[2]/div[2]/div[1]/div/div[2]/img[1]");
+        return By.xpath("(//*[@id=\"container\"]/div/div[2]/div[2]/div[2]/div/div[2]/img[1])[1]");
     }
 
     private By addressField(){
@@ -60,7 +61,10 @@ public class OfflineClassesPage extends PageObject {
     private By deleteLocationIcon(){
         return By.xpath("//*[@id=\"container\"]/div/div[2]/div[2]/div[2]/div/div[2]/img[2]");
     }
-
+    @Step
+    public void seeAlertSuccess(){
+        Switch.toAlert().andAccept();
+    }
     @Step
     public void clickOfflineClassMenu(){
         $(offlineClassMenu()).click();

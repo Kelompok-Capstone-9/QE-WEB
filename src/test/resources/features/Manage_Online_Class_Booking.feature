@@ -6,14 +6,14 @@ Feature: As a admin i want to manage online class booking so that i can see deta
     And admin click manage booking menu
     And admin on manage booking page
 
-  @BookingOnline-1
-  Scenario: as a admin i want to see all online class booking
-    When admin click online menu
-    Then admin can see all online class booking
+@1
+  Scenario: as a admin i want to see all offline class booking
+    When admin click Offline menu
+    Then admin can see all offline class booking
 
-  @BookingOnline-2
-  Scenario: as a admin i want to see detail online class booking
-    When admin click online menu
-    And admin click point three
-    And admin click view detail button
-    Then admin can see detail online class booking
+@1
+  Scenario: as a admin i want to see detail offline class booking
+    When admin click Offline menu
+    And admin click point three oflline
+    And admin click view detail button oflline
+    Then admin can see detail offline class booking

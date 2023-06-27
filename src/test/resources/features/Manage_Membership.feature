@@ -15,14 +15,14 @@ Feature: As a admin i want to manage membership so that i can see membership pla
     And admin click button submit
     Then admin successfully add membership plan
 
-  @Membership-2
+  @Membership-1
   Scenario: As a admin i want to edit membership plan
     When admin click edit membership plan icon
     And admin input field to edit membership plan
     And admin click button submit
     Then admin successfully edit membership plan
 
-  @Membership-3
+  @Membership-1
   Scenario: As a admin i want to delete membership plan
     When admin click delete membership plan icon
     Then admin successfully delete membership plan
